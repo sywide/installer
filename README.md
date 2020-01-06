@@ -6,7 +6,7 @@ At this time, only Windows Powershell is included.
 
 # Getting started
 
-1. Download or create all necessary [packages.config](#packages.config) file
+1. Download or create all necessary [packages.config](#packagesconfig) file
 
 2. If GO is used, download or define requirements.txt with required projects
 
@@ -16,9 +16,9 @@ At this time, only Windows Powershell is included.
 $ Set-ExecutionPolicy Unrestricted
 ```
 
-4. Launch `install.ps1 [--go_bin] package1 package2` where:
+4. Launch `install.ps1 [--godev] package1 package2` where:
 
-   - `go_bin` add golang binaries for development only
+   - `godev` add golang binaries from requirements.txt (for development only)
    - `package` list of needed packages
 
 

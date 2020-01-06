@@ -3,7 +3,7 @@
 # 
 # This script install engineering and programming software package.
 
-param ($go_bin)
+param ($godev)
 $testchoco = powershell choco -v
 $testgo = powershell go version
 
@@ -24,7 +24,7 @@ for ( $i = 0; $i -lt $args.count; $i++ ) {
 }
 
 # Install Golang binaries
-if($go_bin) {
+if($godev) {
   if(-not($testgo)){
     Write-Output "Seems Go is not installed, installing now ..."
     powershell choco install go
