@@ -16,9 +16,9 @@ At this time, only Windows Powershell is included.
 $ Set-ExecutionPolicy Unrestricted
 ```
 
-4. Launch `install.ps1 [--go-bin] package1 package2` where:
+4. Launch `install.ps1 [--go_bin] package1 package2` where:
 
-   - `go-bin` add golang binaries for development only
+   - `go_bin` add golang binaries for development only
    - `package` list of needed packages
 
 

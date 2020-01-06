@@ -3,7 +3,7 @@
 # 
 # This script install engineering and programming software package.
 
-param ($go-bin)
+param ($go_bin)
 $testchoco = powershell choco -v
 $testgo = powershell go version
 
@@ -24,7 +24,7 @@ for ( $i = 0; $i -lt $args.count; $i++ ) {
 }
 
 # Install Golang binaries
-if($go-bin) {
+if($go_bin) {
   if(-not($testgo)){
     Write-Output "Seems Go is not installed, installing now ..."
     powershell choco install go
@@ -33,8 +33,7 @@ if($go-bin) {
     Write-Output "Go Version $testgo is already installed"
   }
   Write-Output "Install Golang binaries ..."
-  Get-Content goget.txt | Foreach-Object{
+  Get-Content requirements.txt | Foreach-Object{
     powershell go get -u "$_"
   }
-  powershell go get -u github.com/spf13/cobra/cobra
 }
